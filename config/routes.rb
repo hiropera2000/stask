@@ -1,4 +1,27 @@
 Rails.application.routes.draw do
+
+  get 'tasks/index'
+
+  get 'tasks/show'
+
+  get 'tasks/list'
+
+  get 'user/:id' => 'users#show'
+  get 'user/:id/update' => 'users#update'
+  get 'users/list' => 'users#index'
+
+#  resources :users do
+#    member do
+#      get 'index'
+#      post 'update'
+#    end
+#
+#    collection do
+#      get 'list'
+#    end
+#  end
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
